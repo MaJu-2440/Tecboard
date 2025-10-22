@@ -1,0 +1,111 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Unbounded:wght@200..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --destaque: #9747FF;
+    --destaque-hover: #8233E8;
+    --texto-darkmode: #F5F5F5;
+    --fundo-darkmode: #0E1014;
+    --texto-lightmode: #232323;
+    --fundo-lightmode: #FFFFFF;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--texto-darkmode);
+    background-color: var(--fundo-darkmode);
+}
+
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem 0;
+}
+
+header .logo {
+    max-width: 200px;
+}
+
+header .btn-darklight-mode {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    text-align: center;
+    margin: 1rem;
+}
+
+.hero h1 {
+    font-family: "Unbounded", sans-serif;
+    font-size: 40px;
+    font-weight: bold;
+    color: var(--fundo-lightmode);
+}
+
+.hero h1 span {
+    color: var(--destaque);
+}
+
+.btn-primario {
+    background-color: var(--destaque);
+    color: var(--texto-darkmode);
+    border: none;
+    border-radius: 36px;
+    padding: 16px 36px;
+    font-family: "Poppins", sans-serif;
+    font-size: 20px;
+    color: #FFF;
+    cursor: pointer;
+}
+
+.btn-primario:hover {
+    background-color: var(--destaque-hover);
+}
+
+.hero img {
+    width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+    .hero {
+        max-width: 648px;
+        margin: 2rem auto;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .hero {
+        max-width: 800px;
+        margin: 3rem auto;
+    }
+
+    .hero h1 {
+        font-size: 64px;
+    }
+
+    body {
+        font-size: 26px;
+    }
+
+    .btn-primario {
+        font-size: 26px;
+        padding: 16px 48px;
+        margin: 1rem 0;
+        border-radius: 48px;
+    }
+}
